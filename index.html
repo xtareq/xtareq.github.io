@@ -163,7 +163,7 @@
   .tag{font-family:var(--mono); font-size:11px; color:var(--text-muted); border:1px solid var(--border); padding:4px 9px; border-radius:2px; background:var(--panel-2);}
 
   /* ---------- Projects ---------- */
-  .projects-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+  .projects-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:22px;}
   @media (max-width:900px){.projects-grid{grid-template-columns:1fr;}}
   .card{
     border:1px solid var(--border); border-radius:6px; background:var(--panel); padding:26px 24px; display:flex; flex-direction:column;
@@ -302,7 +302,7 @@
         <div class="reveal">
           <p>I'm a full stack engineer based in Sylhet, Bangladesh, with <strong>8+ years</strong> of experience shipping production software for clients across the US and beyond. My work spans the entire stack — from Angular and React front ends to Node.js and ASP.NET services, backed by SQL Server and Snowflake.</p>
           <p>What sets my recent work apart is <strong>data</strong>: at Goldner Capital Management I built analytics platforms that turned raw Medicaid, Medicare, and insurance policy data into real-time dashboards used by non-technical stakeholders to make decisions — using Python and Snowflake for processing, and React/Angular for the interfaces on top.</p>
-          <p>Outside client work, I build and ship my own tools — including <strong>XEditor</strong>, a native Rust-based code editor published on the Microsoft Store — and write about TypeScript and software design on dev.to.</p>
+          <p>Outside client work, I build and ship my own tools — including <strong>Avleon</strong>, an open-source TypeScript backend framework, and <strong>XEditor</strong>, a native Rust-based code editor published on the Microsoft Store — and write about TypeScript and software design on dev.to.</p>
         </div>
         <div class="facts reveal">
           <div class="fact"><span class="k">Location</span><span class="v">Sylhet, Bangladesh</span></div>
@@ -327,7 +327,7 @@
           <h3>Software Engineer (Remote)</h3>
           <div class="company">MobileOne Technology · International Client</div>
           <ul>
-            <li>Develop enterprise web and hybrid mobile applications using Angular, ASP.NET, TypeScript, and SQL Server.</li>
+            <li>Built a laundry management platform covering order intake, delivery scheduling, and proof-of-delivery capture, plus a separate safety-management module, using Angular, ASP.NET, TypeScript, and SQL Server.</li>
             <li>Design scalable REST APIs and core business modules; build reusable components and optimize performance.</li>
             <li>Collaborate daily with distributed Agile teams across time zones to plan sprints and deliver on schedule.</li>
           </ul>
@@ -356,7 +356,7 @@
           <h3>Web Application Developer → Senior Full Stack Developer</h3>
           <div class="company">Webnest · Sylhet, Bangladesh</div>
           <ul>
-            <li>Designed custom business applications for local and international clients over a 6-year tenure, progressing to Senior Full Stack Developer.</li>
+            <li>Built restaurant management and school management systems for local and international clients over a 6-year tenure, progressing to Senior Full Stack Developer.</li>
             <li>Owned architecture, deployment, testing, and production support; mentored junior developers on code quality.</li>
           </ul>
           <div class="stack">
@@ -377,6 +377,19 @@
 
         <div class="card reveal">
           <div class="card-top">
+            <h3>Avleon — Backend Framework</h3>
+            <span class="metric-badge">Open Source</span>
+          </div>
+          <svg viewBox="0 0 200 36" preserveAspectRatio="none"><polyline points="0,26 25,20 50,22 75,10 100,14 125,4 150,8 175,2 200,6" fill="none" stroke="#4FD1C5" stroke-width="2"/></svg>
+          <p>A TypeScript-first web framework built on Fastify — decorator-based routing, built-in dependency injection, automatic OpenAPI docs, and TypeORM/Knex integrations. Designed to cut REST API boilerplate to a minimum.</p>
+          <div class="stack">
+            <span class="tag">TypeScript</span><span class="tag">Fastify</span><span class="tag">OpenAPI</span><span class="tag">TypeORM</span>
+          </div>
+          <a href="https://github.com/avleonjs/avleon-core" target="_blank" rel="noopener" class="card-link">View on GitHub ↗</a>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-top">
             <h3>Healthcare &amp; Insurance Analytics Platform</h3>
             <span class="metric-badge">+50% engagement</span>
           </div>
@@ -389,11 +402,11 @@
 
         <div class="card reveal">
           <div class="card-top">
-            <h3>Enterprise Mobile &amp; Web Suite</h3>
+            <h3>Laundry Order &amp; Delivery Platform</h3>
             <span class="metric-badge">Multi-industry</span>
           </div>
           <svg viewBox="0 0 200 36" preserveAspectRatio="none"><polyline points="0,20 25,22 50,12 75,16 100,6 125,10 150,4 175,8 200,3" fill="none" stroke="#F2A93B" stroke-width="2"/></svg>
-          <p>Hybrid mobile and web applications spanning healthcare, hospitality, waste management, and safety industries, delivered for international clients on tight release cycles.</p>
+          <p>End-to-end laundry management system covering order intake, delivery scheduling, and proof-of-delivery capture, plus a separate safety-management module — built for an international client at MobileOne Technology.</p>
           <div class="stack">
             <span class="tag">Ionic</span><span class="tag">Angular</span><span class="tag">ASP.NET</span><span class="tag">SQL Server</span>
           </div>
@@ -448,7 +461,7 @@
         <div class="module reveal">
           <div class="mod-name">Backend &amp; Data</div>
           <div class="chips">
-            <span class="tag">Node.js</span><span class="tag">ASP.NET</span><span class="tag">C#</span><span class="tag">Python</span><span class="tag">REST APIs</span>
+            <span class="tag">Node.js</span><span class="tag">ASP.NET</span><span class="tag">C#</span><span class="tag">Python</span><span class="tag">Fastify</span><span class="tag">REST APIs</span>
           </div>
         </div>
         <div class="module reveal">
@@ -490,7 +503,7 @@
           <div class="when">Completed</div>
         </div>
         <div class="edu-row">
-          <div><div class="title">Bachelor of Arts</div><div class="sub">Sikkim Manipal University (Online)</div></div>
+          <div><div class="title">Bachelor of Arts (English)</div><div class="sub">Sikkim Manipal University (Online)</div></div>
           <div class="when">In Progress</div>
         </div>
         <div class="edu-row">
@@ -532,7 +545,7 @@
 </main>
 
 <footer>
-  <p>© <span id="year"></span> Md Tareq Hossain — Built with HTML, CSS &amp; JS.</p>
+  <p>© <span id="year"></span> Md Tareq Hossain</p>
 </footer>
 
 <script>
