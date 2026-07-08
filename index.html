@@ -176,6 +176,22 @@
   .card p{color:var(--text-muted); font-size:13.5px; margin-bottom:16px; flex:1;}
   .card svg{width:100%; height:36px; margin-bottom:16px; display:block;}
   .card .stack{display:flex; flex-wrap:wrap; gap:6px;}
+  .card-link{
+    display:inline-flex; align-items:center; gap:6px; font-family:var(--mono); font-size:12px; color:var(--teal);
+    margin-top:16px; padding-top:14px; border-top:1px solid var(--border-soft); transition:gap .2s;
+  }
+  .card-link:hover, .card-link:focus-visible{gap:9px;}
+
+  /* ---------- Writing ---------- */
+  .post-row{
+    display:flex; justify-content:space-between; align-items:center; gap:24px; border:1px solid var(--border); border-radius:6px;
+    background:var(--panel); padding:24px 26px; transition:border-color .25s, transform .25s; flex-wrap:wrap;
+  }
+  .post-row:hover{border-color:#4FD1C560; transform:translateY(-3px);}
+  .post-row .post-meta{font-family:var(--mono); font-size:11px; color:var(--text-faint); margin-bottom:8px; letter-spacing:0.03em;}
+  .post-row h3{font-size:17px; font-weight:600; color:var(--text); margin-bottom:8px;}
+  .post-row p{color:var(--text-muted); font-size:13.5px; max-width:60ch;}
+  .post-row .arrow{font-family:var(--mono); color:var(--teal); font-size:13px; white-space:nowrap;}
 
   /* ---------- Skills ---------- */
   .skills-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:16px;}
@@ -230,6 +246,7 @@
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
+      <a href="#writing">Writing</a>
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -242,7 +259,7 @@
   <!-- HERO -->
   <section class="hero">
     <div class="wrap">
-      <!-- <div class="status-line"><span class="blink" aria-hidden="true"></span>AVAILABLE — OPEN TO RELOCATION (MALAYSIA EMPLOYMENT PASS)</div> -->
+      <div class="status-line"><span class="blink" aria-hidden="true"></span>AVAILABLE FOR NEW OPPORTUNITIES</div>
       <h1>Md Tareq Hossain</h1>
       <div class="role">Full Stack Software Engineer — Web, Mobile &amp; Data Analytics</div>
       <p class="lede">8+ years building enterprise web and hybrid mobile applications for international clients — from healthcare and insurance analytics dashboards to financial platforms. Angular, React, Node.js, Python, and SQL, end to end.</p>
@@ -285,11 +302,11 @@
         <div class="reveal">
           <p>I'm a full stack engineer based in Sylhet, Bangladesh, with <strong>8+ years</strong> of experience shipping production software for clients across the US and beyond. My work spans the entire stack — from Angular and React front ends to Node.js and ASP.NET services, backed by SQL Server and Snowflake.</p>
           <p>What sets my recent work apart is <strong>data</strong>: at Goldner Capital Management I built analytics platforms that turned raw Medicaid, Medicare, and insurance policy data into real-time dashboards used by non-technical stakeholders to make decisions — using Python and Snowflake for processing, and React/Angular for the interfaces on top.</p>
+          <p>Outside client work, I build and ship my own tools — including <strong>XEditor</strong>, a native Rust-based code editor published on the Microsoft Store — and write about TypeScript and software design on dev.to.</p>
         </div>
         <div class="facts reveal">
           <div class="fact"><span class="k">Location</span><span class="v">Sylhet, Bangladesh</span></div>
           <div class="fact"><span class="k">Nationality</span><span class="v">Bangladeshi</span></div>
-          <!-- <div class="fact"><span class="k">Relocation</span><span class="v">Malaysia (EP)</span></div> -->
           <div class="fact"><span class="k">Role</span><span class="v">Full Stack Engineer</span></div>
           <div class="fact"><span class="k">Focus</span><span class="v">Web · Mobile · Data</span></div>
           <div class="fact"><span class="k">Status</span><span class="v" style="color:var(--teal)">Open to work</span></div>
@@ -384,21 +401,39 @@
 
         <div class="card reveal">
           <div class="card-top">
-            <h3>Reusable Component Library</h3>
-            <span class="metric-badge">−25% dev cost</span>
+            <h3>XEditor — Native Code Editor</h3>
+            <span class="metric-badge">Microsoft Store</span>
           </div>
           <svg viewBox="0 0 200 36" preserveAspectRatio="none"><polyline points="0,10 25,14 50,8 75,18 100,12 125,22 150,16 175,26 200,20" fill="none" stroke="#4FD1C5" stroke-width="2"/></svg>
-          <p>A standardized, documented component library adopted across client projects — cutting redundant build time and giving new features a consistent foundation.</p>
+          <p>A fast, lightweight code editor for Windows, built solo with Rust and WebView2 for native performance — instant startup, low memory use, syntax highlighting, no account required. Published and live on the Microsoft Store.</p>
           <div class="stack">
-            <span class="tag">TypeScript</span><span class="tag">Angular</span><span class="tag">Node.js</span>
+            <span class="tag">Rust</span><span class="tag">WebView2</span><span class="tag">Desktop App</span>
           </div>
+          <a href="https://apps.microsoft.com/detail/9p8x3hzwltsr" target="_blank" rel="noopener" class="card-link">View on Microsoft Store ↗</a>
         </div>
 
       </div>
     </div>
   </section>
 
+  <!-- WRITING -->
+  <section id="writing">
+    <div class="wrap">
+      <div class="eyebrow">WRITING</div>
+      <h2 class="section-title reveal">Notes from the console</h2>
+      <a class="post-row reveal" href="https://dev.to/xtareq/the-art-of-beautiful-functions-in-typescript-1eb7" target="_blank" rel="noopener">
+        <div>
+          <div class="post-meta">DEV COMMUNITY · SEP 2025 · TYPESCRIPT</div>
+          <h3>The Art of Beautiful Functions in TypeScript</h3>
+          <p>On using TypeScript's type system as a design tool — type-first function signatures, generics, overloads, and Result-based error handling that make intent explicit and catch mistakes before runtime.</p>
+        </div>
+        <div class="arrow">Read on dev.to →</div>
+      </a>
+    </div>
+  </section>
+
   <!-- SKILLS -->
+
   <section id="skills">
     <div class="wrap">
       <div class="eyebrow">SKILLS</div>
@@ -431,7 +466,7 @@
         <div class="module reveal">
           <div class="mod-name">DevOps &amp; Other</div>
           <div class="chips">
-            <span class="tag">Docker</span><span class="tag">Git</span><span class="tag">Go</span><span class="tag">Java</span>
+            <span class="tag">Docker</span><span class="tag">Git</span><span class="tag">Go</span><span class="tag">Rust</span><span class="tag">Java</span>
           </div>
         </div>
         <div class="module reveal">
@@ -455,7 +490,7 @@
           <div class="when">Completed</div>
         </div>
         <div class="edu-row">
-          <div><div class="title">Bachelor of Arts (English)</div><div class="sub">Sikkim Manipal University (Online)</div></div>
+          <div><div class="title">Bachelor of Arts</div><div class="sub">Sikkim Manipal University (Online)</div></div>
           <div class="when">In Progress</div>
         </div>
         <div class="edu-row">
@@ -481,7 +516,6 @@
           <div>&nbsp;&nbsp;md_tareq_hossain — full_stack_engineer</div>
           <div><span class="p">$</span> <span class="c">status</span></div>
           <div>&nbsp;&nbsp;open_to_work: true</div>
-          <!-- <div>&nbsp;&nbsp;relocation: "Malaysia (Employment Pass)"</div> -->
           <div><span class="p">$</span> <span class="c">contact --reach</span></div>
           <div>&nbsp;&nbsp;awaiting your message_</div>
         </div>
@@ -498,7 +532,7 @@
 </main>
 
 <footer>
-  <p>© <span id="year"></span> Md Tareq Hossain</p>
+  <p>© <span id="year"></span> Md Tareq Hossain — Built with HTML, CSS &amp; JS.</p>
 </footer>
 
 <script>
